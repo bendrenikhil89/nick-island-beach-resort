@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BeachResortDetailsProvider} from './context/ContextData';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BeachResortDetailsProvider>
+      <App />
+    </BeachResortDetailsProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

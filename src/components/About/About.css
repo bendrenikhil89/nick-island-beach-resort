@@ -1,0 +1,29 @@
+.about__para{
+    padding:15px 25px 40px 25px;
+    justify-self: auto;
+    margin:0px;
+    max-width: 1366px;
+    margin:0 auto;
+    line-height: 1.5;
+    /* letter-spacing: 1.5px; */
+}
+
+.about__wrapper{
+    width:100%;
+}
+
+.about__title{
+    margin:0px;
+    padding-top:40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to left , #1769aa, #1769aa ) no-repeat bottom center / 100px 4px;
+}
+
+.about__subtitle{
+    justify-self: auto;
+    max-width: 1366px;
+    margin: 45px auto 0px auto;
+    padding: 0px 25px;
+}
