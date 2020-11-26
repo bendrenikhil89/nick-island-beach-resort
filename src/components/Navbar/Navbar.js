@@ -5,6 +5,7 @@ import './Navbar.css';
 function Navbar() {
     const [click, setClick] = useState(false);
     const [activeLink, setActiveLink] = useState('Home');
+    const [navbarBg, setNavbarBg] = useState(false);
 
     const hamburgerClickHandler = () => setClick(prevClick => !prevClick);
     const closeMobileMenuHandler = (e) => {
@@ -12,16 +13,35 @@ function Navbar() {
         setClick(false);
     }
 
+    const changeBackground = () => {
+        if(window.scrollY > 80){
+            setNavbarBg(true)
+        } else {
+            setNavbarBg(false);
+        }
+    }
+    window.addEventListener('scroll', changeBackground);
+
     return (
         <>
-            <nav className="navbar">
+            <nav className={navbarBg ? 'navbar navbarBg__active' : 'navbar'}>
                 <div className="navbar__container">
                     <Link to="/" className="navbar__logo">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.87 60.87" height="64" width="64">
-                            <path className="navbar__cls-1" d="M53.7,30.56a8.13,8.13,0,0,0,5.06-7.87,9,9,0,0,0-3.31-7.5,10.21,10.21,0,0,0-3.88-1.86,25.54,25.54,0,0,0-5.85-.54H32.35v6.15h12.3c2.17,0,3.71.33,4.63,1a3.86,3.86,0,0,1,1.36,3.35,4,4,0,0,1-1.45,3.39c-.85.64-2.37,1-4.54,1H32.35v6.15H44.19q3.89,0,5.55,1.06a4.45,4.45,0,0,1,1.94,4,4.4,4.4,0,0,1-1.94,4Q48,44,44.19,44H32.35v6.15H46A24.16,24.16,0,0,0,52,49.47a11.94,11.94,0,0,0,4.31-2.09,9.66,9.66,0,0,0,3.66-8Q60,32.94,53.7,30.56Z"/>
-                            <polyline className="navbar__cls-2" points="21.47 13.02 27.44 13.02 27.44 50.04 13.04 35.64 13.04 23.78 21.25 32"/>
-                            <path className="navbar__cls-3" d="M1,13l6.47,6.47V50.55H1S.82,13,1,13Z"/>
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.4 58.98" height="64">
+                            <path className="navbar__cls-1" d="M70.93,19.18,60.67,27.69,50.31,19l10.18-8.65Z"/>
+                            <path className="navbar__cls-1" d="M112.09,19.33l-10.25,8.51L91.47,19.11l10.18-8.66Z"/>
+                            <path className="navbar__cls-1" d="M101.57,10.31,91.4,19,81.34,10.53l10.18-9Z"/>
+                            <path className="navbar__cls-1" d="M81.34,10.53,71,19,60.73,10.25l9.83-8.47Z"/>
+                            <path className="navbar__cls-1" d="M91.65,36.42,81.4,44.93,71,36.2l10.18-8.65Z"/>
+                            <path className="navbar__cls-2" d="M60.53,10.27l-10-8.51h20Z"/>
+                            <path className="navbar__cls-2" d="M101.57,10.22l-10-8.75h20.16Z"/>
+                            <path className="navbar__cls-2" d="M91.67,36.39,81.34,27.63l20.49.2Z"/>
+                            <path className="navbar__cls-2" d="M70.93,36.24,60.68,27.69l20.44-.1Z"/>
+                            <path className="navbar__cls-3" d="M71,19.07l10.13,8.52q-9.67.12-19.43.1h-1Z"/>
+                            <path className="navbar__cls-3" d="M91.58,19.07l10.25,8.76L81.28,27.6Z"/>
+                            <text className="navbar__cls-4" transform="translate(0.81 58.6)">NICK ISLAND RESORT</text>
                         </svg>
+
                     </Link>
                     <div className="navbar__menuicon" onClick={hamburgerClickHandler}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

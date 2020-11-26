@@ -170,11 +170,13 @@
     border: 1px solid #fff;
     text-transform: capitalize;
     text-shadow: 1px #000;
+    color:#282828;
+    background: #fff;
   }
 
   .slider__slide.s--active .slider__slide-readmore:hover{
-    background: #fff;
-    color:#282828;
+    background: transparent;
+    color:#fff;
   }
   .slider__slide.s--active .slider__slide-readmore {
     -webkit-transition-delay: 0.05s;
@@ -408,5 +410,22 @@
   @media screen and (max-width: 960px) {
     .slider {
       margin-top: 0px;
+    }
+  }
+
+  @media screen and (min-width:281px) and (max-width:600px){
+    .slider__slide-subheading{
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width:280px){
+    .slider__slide-subheading{
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+    .slider__slide-readmore{
+      font-size: 10px;
     }
   }

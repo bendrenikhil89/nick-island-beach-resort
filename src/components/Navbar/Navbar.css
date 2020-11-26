@@ -1,13 +1,16 @@
-.navbar__cls-1{
-    fill:#8bc540;
+.navbar__cls-1,.navbar__cls-4{
+  fill:#da73ae;
 }
-
+.navbar__cls-2,.navbar__cls-3{
+  fill:#b791c3;
+}
 .navbar__cls-2{
-    fill:#f7b818;
+  opacity:0.59;
 }
-
-.navbar__cls-3{
-    fill:#f26c59;
+.navbar__cls-4{
+  font-size:16px;
+  font-family:"Open Sans", Verdana;
+  font-weight: bold;
 }
 
 .navbar {
@@ -34,7 +37,7 @@
   .navbar__logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -77,6 +80,10 @@
     display: none;
   }
   
+  .navbarBg__active{
+    background: #0d1b2a;
+  }
+
   .navbar__menuicon {
     display: none;
   }

@@ -1,10 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
-import * as contentful from 'contentful';
-
-const client  = contentful.createClient({
-    space: 'zqhs6igq9nym',
-    accessToken: 'T5xnKSatkldZzwwAOnkKSNU98e5IFYZUwTszMaFf8CU'
-});
+import client from '../client';
 
 export const BeachResortContext = createContext();
 
@@ -13,6 +8,7 @@ export const BeachResortDetailsProvider = (props) => {
     const [resortDataImages, setResortDataImages] = useState([]);
     const [resortDataInfo, setResortDataInfo] = useState('');
     const [resortDataServices, setResortDataServices] = useState([]);
+    const [resortDataReviews, setResortDataReviews] = useState([]);
 
     useEffect(() => {
         client.getEntries({
@@ -27,13 +23,14 @@ export const BeachResortDetailsProvider = (props) => {
                 }));
                 setResortDataInfo(data[0].fields.resortDetails);
                 setResortDataServices(data[0].fields.resortServices);
+                setResortDataReviews(data[0].fields.resortReviews);
             }
         })
         .catch(console.error)
     }, []);
 
     return (
-        <BeachResortContext.Provider value={{resortData, resortDataImages, resortDataInfo, resortDataServices}}> 
+        <BeachResortContext.Provider value={{resortData, resortDataImages, resortDataInfo, resortDataServices, resortDataReviews}}> 
             {props.children}
         </BeachResortContext.Provider>
     );

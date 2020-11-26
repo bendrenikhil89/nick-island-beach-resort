@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     color:#282828;
-    background: linear-gradient(to left , #1769aa, #1769aa ) no-repeat bottom center / 40px 4px;
+    /* background: linear-gradient(to left , #1769aa, #1769aa ) no-repeat bottom center / 40px 4px; */
+    background: linear-gradient(to left , #3e5db0, #3e5db0 ) no-repeat bottom center / 40px 4px;
     margin-bottom: 40px;
 }
 
@@ -90,6 +91,8 @@
   .card-title-wrapper h4{
     margin-left:15px;
     background: linear-gradient(to left , #ffffff, #ffffff ) no-repeat bottom left / 50px 3px;
+    font-size: 20px;
+    font-weight: normal;
   }
 
   @media screen and (max-width: 568px) {

@@ -18,7 +18,8 @@
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to left , #1769aa, #1769aa ) no-repeat bottom center / 100px 4px;
+    /* background: linear-gradient(to left , #1769aa, #1769aa ) no-repeat bottom center / 100px 4px; */
+    background: linear-gradient(to left , #3e5db0, #3e5db0 ) no-repeat bottom center / 100px 4px;
 }
 
 .about__subtitle{
