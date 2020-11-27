@@ -1,0 +1,28 @@
+.rooms__banner{
+    background: url('../../assets/images/RoomsBanner.jpg') center center/cover no-repeat;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.65);
+    object-fit: contain;
+    margin-top: -80px;
+    transition: box-shadow .3s ease-out;
+}
+
+.rooms__banner h1{
+    color:#fff;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.72);
+}
+
+.rooms__banner:hover {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+    transition: box-shadow .3s ease-out;
+}

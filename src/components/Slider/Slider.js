@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Slider.css';
 import classNames from 'classnames';
+import {Link} from 'react-router-dom';
 
 class Slider extends Component {
     constructor(props) {
@@ -46,7 +47,6 @@ class Slider extends Component {
       const { activeSlide, prevSlide, sliderReady } = this.state;
       return (
         <div className={classNames('slider', { 's--ready': sliderReady })}>
-          {/* <p className="slider__top-heading">Travelers</p> */}
           <div className="slider__slides">
             {this.props.slides.map((slide, index) => (
               <div
@@ -55,10 +55,7 @@ class Slider extends Component {
                 >
                 <div className="slider__slide-content">
                   <h3 className="slider__slide-subheading">{slide.bannerText}</h3>
-                  {/* <h2 className="slider__slide-heading">
-                    {slide.city.split('').map((l, index) => <span key={index}>{l}</span>)}
-                  </h2> */}
-                  <p className="slider__slide-readmore">Our Rooms</p>
+                  <Link className="slider__readmore__anchor" to="/rooms"><p className="slider__slide-readmore">Our Rooms</p></Link>
                 </div>
                 <div className="slider__slide-parts">
                   {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (

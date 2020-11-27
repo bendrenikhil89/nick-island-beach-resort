@@ -131,4 +131,13 @@
         margin-bottom: 30px;
     }
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1365px) {
+  .services__wrapper{
+    flex-direction: column;
+  }
+  .card-section{
+    width: 33rem;
+  }
+}
   

@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './Reviews.css';
+import './RoomPhotos.css';
 
 const responsive = {
     desktop: {
@@ -21,29 +21,26 @@ const responsive = {
     }
 };
 
-const Reviews = ({autoPlay, slides}) => {
-    let slidesDiv = slides.map(slide => (
-        <div key={slide.from} >
-            <i className="fas fa-quote-left"></i>
-            <div className="reviews__style">
-                {slide.details}
-            </div>
-            <div className="review__by__style">
-                - {slide.from}
-                <i className="fas fa-quote-right"></i>
-            </div>
-            {/* <i className="fas fa-quote-right"></i> */}
-        </div> 
+const RoomPhotos = ({autoPlay, slides}) => {
+    let slidesDiv = slides.map((slide, i) => (
+        <img
+            key={slide.key}
+            src={slide.img}
+            style={{
+                display: 'block',
+                height: '250px',
+                margin: 'auto',
+                width: 'inherit',
+                backgroundSize: 'contain'
+            }}
+        /> 
     ));
     return (
-        <div className="reviews__wrapper">
-            <h2 className="reviews__title">Testimonials</h2>
             <Carousel
                 swipeable={false}
                 draggable={false}
                 showDots={true}
                 responsive={responsive}
-                ssr={false} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={autoPlay}
                 autoPlaySpeed={5000}
@@ -52,14 +49,14 @@ const Reviews = ({autoPlay, slides}) => {
                 transitionDuration={500}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                deviceType="mobile"
+                deviceType="desktop"
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
                 {slidesDiv}
             </Carousel>
-        </div>
+        
     )
 }
 
-export default Reviews;
+export default RoomPhotos;
