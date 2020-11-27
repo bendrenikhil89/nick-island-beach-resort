@@ -11,6 +11,7 @@ export const BeachResortDetailsProvider = (props) => {
 
     const [resortRoomDetails, setResortRoomDetails] = useState([]);
     const [resortAllRoomDetails, setResortAllRoomDetails] = useState([]);
+    const [filters, setFilters] = useState({roomType: 'All', roomMaxCapacity: 'All', roomPrice: 799});
 
     const getBeachResortData = async() => {
         var getResortDetails = client.getEntries({
@@ -34,6 +35,7 @@ export const BeachResortDetailsProvider = (props) => {
                 if(resortRoomsTemp.length > 0){
                     setResortRoomDetails(extractResortRoomDetails(resortRoomsTemp));
                     setResortAllRoomDetails(extractResortRoomDetails(resortRoomsTemp));
+                    setFilters({...filters, roomPrice:Math.max(...extractResortRoomDetails(resortRoomsTemp).map(item => item.roomPrice))});
                 }
             })
             .catch(console.error)
@@ -59,16 +61,32 @@ export const BeachResortDetailsProvider = (props) => {
     }
 
     const changeHandler = e => {
-        let tempResortRoomDetails = [...resortAllRoomDetails];
-        setResortRoomDetails(tempResortRoomDetails.filter(tempRoom => tempRoom.roomMaxCapacity > e.target.value));
+        var filterType = e.target.attributes.identifier.value;
+        setFilters({...filters, [filterType]:e.target.value})
     }
     
     useEffect(() => {
         getBeachResortData();
     }, []);
 
+    useEffect(()=>{
+        let tempResortRoomDetails = [...resortAllRoomDetails];
+        for (const [key, value] of Object.entries(filters)) {
+            if(value !== "All" && key === "roomType"){
+                tempResortRoomDetails = tempResortRoomDetails.filter(tempRoom => tempRoom[key] === value);
+            }
+            if(value !== "All" && key === "roomMaxCapacity"){
+                tempResortRoomDetails = tempResortRoomDetails.filter(tempRoom => tempRoom[key] === parseInt(value));
+            }
+            if(key === "roomPrice"){
+                tempResortRoomDetails = tempResortRoomDetails.filter(tempRoom => (tempRoom[key] <= parseInt(value)));
+            }
+        }
+        setResortRoomDetails(tempResortRoomDetails);
+    },[filters])
+
     return (
-        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, changeHandler}}> 
+        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, resortAllRoomDetails, filters, changeHandler}}> 
             {props.children}
         </BeachResortContext.Provider>
     );
