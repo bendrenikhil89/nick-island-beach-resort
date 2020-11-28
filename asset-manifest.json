@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nick-island-beach-resort/static/css/main.49c1d76e.chunk.css",
-    "main.js": "/nick-island-beach-resort/static/js/main.e0795499.chunk.js",
-    "main.js.map": "/nick-island-beach-resort/static/js/main.e0795499.chunk.js.map",
+    "main.js": "/nick-island-beach-resort/static/js/main.8301fc78.chunk.js",
+    "main.js.map": "/nick-island-beach-resort/static/js/main.8301fc78.chunk.js.map",
     "runtime-main.js": "/nick-island-beach-resort/static/js/runtime-main.d95c3b5c.js",
     "runtime-main.js.map": "/nick-island-beach-resort/static/js/runtime-main.d95c3b5c.js.map",
     "static/css/2.ea95978e.chunk.css": "/nick-island-beach-resort/static/css/2.ea95978e.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.ea95978e.chunk.css",
     "static/js/2.5955b509.chunk.js",
     "static/css/main.49c1d76e.chunk.css",
-    "static/js/main.e0795499.chunk.js"
+    "static/js/main.8301fc78.chunk.js"
   ]
 }
