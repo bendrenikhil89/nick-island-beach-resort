@@ -33,6 +33,7 @@
     justify-content: center;
     color:#282828;
     background: linear-gradient(to left , #3e5db0, #3e5db0 ) no-repeat bottom center / 60px 4px;
+    margin-bottom: 10px;
 }
 
 .fa-quote-left {

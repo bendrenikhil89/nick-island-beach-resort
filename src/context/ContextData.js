@@ -4,6 +4,7 @@ import client from '../client';
 export const BeachResortContext = createContext();
 
 export const BeachResortDetailsProvider = (props) => {
+    const [loading, setLoading] = useState(true);
     const [resortDataImages, setResortDataImages] = useState([]);
     const [resortDataInfo, setResortDataInfo] = useState('');
     const [resortDataServices, setResortDataServices] = useState([]);
@@ -37,6 +38,10 @@ export const BeachResortDetailsProvider = (props) => {
                     setResortAllRoomDetails(extractResortRoomDetails(resortRoomsTemp));
                     setFilters({...filters, roomPrice:Math.max(...extractResortRoomDetails(resortRoomsTemp).map(item => item.roomPrice))});
                 }
+                setTimeout(() => {
+                    setLoading(false);
+                }, 1000)
+                
             })
             .catch(console.error)
     }
@@ -86,7 +91,7 @@ export const BeachResortDetailsProvider = (props) => {
     },[filters])
 
     return (
-        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, resortAllRoomDetails, filters, changeHandler}}> 
+        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, resortAllRoomDetails, filters, loading, changeHandler}}> 
             {props.children}
         </BeachResortContext.Provider>
     );

@@ -9,6 +9,7 @@ const getUnique = (items, value) => {
 const FilterRooms = () => {
     const {changeHandler, filters, resortAllRoomDetails} = useContext(BeachResortContext);
     let types = getUnique(resortAllRoomDetails, "roomType");
+    types.sort();
     types = ["All", ...types];
     types = types.map((item, index) => (
         <option key={index} value={item}>
@@ -17,6 +18,7 @@ const FilterRooms = () => {
     ));
 
     let people = getUnique(resortAllRoomDetails, "roomMaxCapacity");
+    people.sort(function(a, b){return a - b});
     people = ["All", ...people];
     people = people.map((item, index) => (
         <option key={index} value={item}>
@@ -25,8 +27,7 @@ const FilterRooms = () => {
     ));
 
     let maxPrice = Math.max(...resortAllRoomDetails.map(item => item.roomPrice));
-    // let maxSize = Math.max(...resortAllRoomDetails.map(item => item.roomSize));
-
+    
     return (
         <div className="filter__container">
             <div className="filter__header">

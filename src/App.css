@@ -17,3 +17,13 @@
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #0d1b2a;
 }
+
+#root{
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
+}
+
+.app__wrapper{
+	flex-grow: 1;
+}

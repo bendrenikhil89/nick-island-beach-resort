@@ -42,6 +42,21 @@ function Navbar() {
                             <text className="navbar__cls-4" transform="translate(0.81 58.6)">NICK ISLAND RESORT</text>
                         </svg>
 
+                        {/* <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.95 58.98" height="64">
+                            <path className="cls-1" d="M25.55,27.44,15.29,36,4.93,27.22l10.18-8.66Z"/>
+                            <path className="cls-1" d="M66.71,27.58,56.45,36.09,46.09,27.36l10.18-8.65Z"/>
+                            <path className="cls-1" d="M56.19,18.56,46,27.2,36,18.78l10.18-9Z"/>
+                            <path className="cls-1" d="M36,18.78,25.62,27.29,15.35,18.51,25.18,10Z"/>
+                            <path className="cls-1" d="M46.27,44.67,36,53.18,25.65,44.45,35.84,35.8Z"/>
+                            <path className="cls-2" d="M15.15,18.53,5.18,10h20Z"/>
+                            <path className="cls-2" d="M56.19,18.47l-10-8.74H66.31Z"/>
+                            <path className="cls-2" d="M46.28,44.64,36,35.88l20.5.2Z"/>
+                            <path className="cls-2" d="M25.55,44.49,15.3,35.94l20.44-.09Z"/>
+                            <path className="cls-3" d="M25.62,27.33l10.13,8.51q-9.67.12-19.43.1h-1Z"/>
+                            <path className="cls-3" d="M46.2,27.33l10.24,8.75L35.9,35.85Z"/>
+                            <text className="cls-4" transform="translate(72.81 34.97)">NICK ISLAND BEACH RESORT</text>
+                        </svg> */}
+
                     </Link>
                     <div className="navbar__menuicon" onClick={hamburgerClickHandler}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

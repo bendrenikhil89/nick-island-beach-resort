@@ -1,8 +1,12 @@
 .navbar__cls-1,.navbar__cls-4{
-  fill:#da73ae;
+  fill:#fdfefe;
 }
-.navbar__cls-2,.navbar__cls-3{
-  fill:#b791c3;
+.navbar__cls-2{
+  fill:#bbb;
+}
+
+.navbar__cls-3{
+  fill:#686868;
 }
 .navbar__cls-2{
   opacity:0.59;
@@ -11,10 +15,10 @@
   font-size:16px;
   font-family:"Open Sans", Verdana;
   font-weight: bold;
+  padding-top: 5px;
 }
 
 .navbar {
-    /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
     background:transparent;
     height: 80px;
     display: flex;

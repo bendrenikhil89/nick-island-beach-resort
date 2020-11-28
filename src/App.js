@@ -5,14 +5,22 @@ import './App.css';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 
 function App() {
   return (
     <Router>
+      <div className="app__wrapper">
       <Navbar />
-      <Route path="/" exact><Home /></Route>
-      <Route path="/rooms" exact><Rooms /></Route>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/" exact><Home /></Route>
+        <Route path="/rooms" exact><Rooms /></Route>
+        <Route path="*"><PageNotFound /></Route>
+      </Switch>
+      </div>
       <Footer />
     </Router>
   );
