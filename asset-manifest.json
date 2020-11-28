@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/nick-island-beach-resort/static/css/main.49c1d76e.chunk.css",
-    "main.js": "/nick-island-beach-resort/static/js/main.8301fc78.chunk.js",
-    "main.js.map": "/nick-island-beach-resort/static/js/main.8301fc78.chunk.js.map",
+    "main.css": "/nick-island-beach-resort/static/css/main.3b88b693.chunk.css",
+    "main.js": "/nick-island-beach-resort/static/js/main.5f778ae2.chunk.js",
+    "main.js.map": "/nick-island-beach-resort/static/js/main.5f778ae2.chunk.js.map",
     "runtime-main.js": "/nick-island-beach-resort/static/js/runtime-main.d95c3b5c.js",
     "runtime-main.js.map": "/nick-island-beach-resort/static/js/runtime-main.d95c3b5c.js.map",
     "static/css/2.ea95978e.chunk.css": "/nick-island-beach-resort/static/css/2.ea95978e.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.020c0da9.chunk.js.map": "/nick-island-beach-resort/static/js/3.020c0da9.chunk.js.map",
     "index.html": "/nick-island-beach-resort/index.html",
     "static/css/2.ea95978e.chunk.css.map": "/nick-island-beach-resort/static/css/2.ea95978e.chunk.css.map",
-    "static/css/main.49c1d76e.chunk.css.map": "/nick-island-beach-resort/static/css/main.49c1d76e.chunk.css.map",
+    "static/css/main.3b88b693.chunk.css.map": "/nick-island-beach-resort/static/css/main.3b88b693.chunk.css.map",
     "static/js/2.5955b509.chunk.js.LICENSE.txt": "/nick-island-beach-resort/static/js/2.5955b509.chunk.js.LICENSE.txt",
     "static/media/RoomsBanner.css": "/nick-island-beach-resort/static/media/RoomsBanner.36508613.jpg",
     "static/media/styles.css": "/nick-island-beach-resort/static/media/revicons.e8746a62.woff"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.d95c3b5c.js",
     "static/css/2.ea95978e.chunk.css",
     "static/js/2.5955b509.chunk.js",
-    "static/css/main.49c1d76e.chunk.css",
-    "static/js/main.8301fc78.chunk.js"
+    "static/css/main.3b88b693.chunk.css",
+    "static/js/main.5f778ae2.chunk.js"
   ]
 }
