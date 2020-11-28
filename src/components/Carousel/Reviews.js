@@ -39,7 +39,7 @@ const Reviews = ({autoPlay, slides}) => {
         <div className="reviews__wrapper">
             <h2 className="reviews__title">Testimonials</h2>
             <Carousel
-                swipeable={false}
+                swipeable={true}
                 draggable={false}
                 showDots={true}
                 responsive={responsive}
