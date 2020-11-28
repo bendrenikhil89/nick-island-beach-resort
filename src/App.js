@@ -11,7 +11,7 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.REACT_APP_PUBLIC_URL}>
       <div className="app__wrapper">
       <Navbar />
       <ScrollToTop />
