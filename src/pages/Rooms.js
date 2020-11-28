@@ -19,7 +19,7 @@ const Rooms = () => {
             <>
                 <RoomsBanner />
                 <FilterRooms />
-                {resortRoomDetails.length > 0 ? room : <h4 style={{maxWidth: '1366px',margin: '0px auto 50px auto', display: 'flex',justifyContent: 'center'}}>
+                {resortRoomDetails.length > 0 ? room : <h4 className="room__notfound">
                     There are no rooms matching your search criteria.
                 </h4>}
             </>

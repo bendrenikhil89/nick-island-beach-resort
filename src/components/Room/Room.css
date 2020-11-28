@@ -77,6 +77,13 @@
     margin:0px;
 }
 
+.room__notfound{
+    max-width: 1366px;
+    margin: 0px auto 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 968px){
     .room__container{
         flex-direction: column;
@@ -94,5 +101,12 @@
 @media screen and (max-width: 1365px){
     .room__container{
         margin: 25px 25px;
+    }
+}
+
+@media screen and (max-width:568px){
+    .room__notfound{
+        width: 88%;
+        margin: 20px auto;
     }
 }
