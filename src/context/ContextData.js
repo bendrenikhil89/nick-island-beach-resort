@@ -12,7 +12,7 @@ export const BeachResortDetailsProvider = (props) => {
 
     const [resortRoomDetails, setResortRoomDetails] = useState([]);
     const [resortAllRoomDetails, setResortAllRoomDetails] = useState([]);
-    const [filters, setFilters] = useState({roomType: 'All', roomMaxCapacity: 'All', roomPrice: 799});
+    const [filters, setFilters] = useState({roomType: 'All', roomMaxCapacity: 'All', roomPrice: 0});
 
     const getBeachResortData = async() => {
         var getResortDetails = client.getEntries({
@@ -91,7 +91,7 @@ export const BeachResortDetailsProvider = (props) => {
     },[filters])
 
     return (
-        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, resortAllRoomDetails, filters, loading, changeHandler}}> 
+        <BeachResortContext.Provider value={{resortDataImages, resortDataInfo, resortDataServices, resortDataReviews, resortRoomDetails, resortAllRoomDetails, filters, loading, changeHandler, setFilters}}> 
             {props.children}
         </BeachResortContext.Provider>
     );
