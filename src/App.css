@@ -50,4 +50,8 @@
 	.navbar{
 		font-size: 1rem;
 	}
+
+	.navbar__navlinks{
+		padding:1.7rem 1rem;
+	}
 }
