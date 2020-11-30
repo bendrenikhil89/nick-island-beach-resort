@@ -39,7 +39,6 @@
   .card-body h4 {
     margin: 0px;
     font-weight: bold;
-    font-family: sans-serif;
     letter-spacing: 0.5px;
     color: #ecedef;
   }
@@ -91,7 +90,7 @@
   .card-title-wrapper h4{
     margin-left:15px;
     background: linear-gradient(to left , #ffffff, #ffffff ) no-repeat bottom left / 50px 3px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
   }
 
